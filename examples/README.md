@@ -26,6 +26,8 @@ Using the connection string given to you, you can extract the hostname and port 
 
 ### The web app
 
+The examples configure a web app that displays a list of fake contacts, queried from the database.
+
 <p align="center">
     <img src="screenshot.png" alt="screenshot of the web app in the examples" width="1010">
 </p>
