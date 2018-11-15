@@ -2,6 +2,7 @@
 
 * [Go](./go-contacts)
 * [Laravel](./laravel-contacts)
+* [Node](./node-contacts)
 
 ### The web app
 
