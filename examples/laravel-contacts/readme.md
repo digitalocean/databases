@@ -1,5 +1,7 @@
 ## Databases with Laravel
 
+This example uses Eloquent to connect to a DigitalOcean PostgreSQL database, with support for JSONB (see the `favorites` column in [the dataset](../README.md#the-dataset)).
+
 1. Install the dependencies using composer: `composer install`
 2. Plug in your connection credentials in the `.env` file. Use `.env.example` for reference. To look up your DigitalOcean Database connection details, see [the examples README](../README.md#databases-credentials).
 3. Migrate and seed the database: `php artisan migrate --seed`
