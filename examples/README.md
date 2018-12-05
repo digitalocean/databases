@@ -54,6 +54,8 @@ CREATE TABLE contacts (
 
 ##### Importing
 
+The Go and Node examples require existing data in order to work, so you will need to import the example dataset. The Laravel example, however, automatically generates random contacts as part of its database migration flow so you will not need to do anything beyond creating a new database.
+
 First, download the SQL export and save it somewhere accessible to you: [contacts.sql](./contacts.sql)
 
 To import using the command line, prepare your [connection string](#database-credentials) and run the following command, replacing the connecting string with your own:
