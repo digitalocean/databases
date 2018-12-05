@@ -4,5 +4,6 @@ This example uses [sqlx](https://github.com/jmoiron/sqlx) along with [pgx](https
 
 1. Install the dependencies: `go get -u -v ./...`
 2. Build the app: `go build .`
-3. Prepare your PostgreSQL connection string. See [the examples README](../README.md#databases-credentials)
-4. Start the app: `./go-contacts -conn "PostgreSQL Connection String"`
+3. Prepare your PostgreSQL connection string. See [the examples README](../README.md#database-credentials)
+4. [Import the dataset](../README.md#the-dataset) if necessary
+5. Start the app: `./go-contacts -conn "PostgreSQL Connection String"`

@@ -4,7 +4,7 @@
 * [Laravel](./laravel-contacts)
 * [Node](./node-contacts)
 
-### Databases credentials
+### Database credentials
 
 These examples require a DigitalOcean Database instance. In the control panel, you are given a "Connection String" that looks like so:
 
@@ -28,6 +28,8 @@ Using the connection string given to you, you can extract the hostname and port 
 
 The examples configure a web app that displays a list of fake contacts, queried from the database.
 
+See instructions below on how to import the example dataset to your database.
+
 <p align="center">
     <img src="screenshot.png" alt="screenshot of the web app in the examples" width="1010">
 </p>
@@ -35,6 +37,34 @@ The examples configure a web app that displays a list of fake contacts, queried 
 ### The dataset
 
 The dataset used in the examples is structured like so:
+
+```sql
+CREATE TABLE contacts (
+    id integer NOT NULL,
+    name character varying(255) NOT NULL,
+    phone character varying(255) NOT NULL,
+    address character varying(255) NOT NULL,
+    favorites jsonb DEFAULT '{}'::jsonb NOT NULL,
+    created_at timestamp(0) without time zone,
+    updated_at timestamp(0) without time zone
+);
+```
+
+#### Example dataset
+
+##### Importing
+
+First, download the SQL export and save it somewhere accessible to you: [contacts.sql](./contacts.sql)
+
+To import using the command line, prepare your [connection string](#database-credentials) and run the following command, replacing the connecting string with your own:
+
+```
+psql 'postgresql://user:password@db-postgresql-fra1-000-do-user-000-0.db.ondigitalocean.com:25060/database?sslmode=require' < contacts.sql
+```
+
+To import using a GUI client, connect to the database and import the `contacts.sql` file through the method the client offers you.
+
+##### Contents
 
 | id | name                    | phone          | address                                                    | favorites                                                               | created_at          | updated_at          |
 |----|-------------------------|----------------|------------------------------------------------------------|-------------------------------------------------------------------------|---------------------|---------------------|
