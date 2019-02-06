@@ -7,6 +7,9 @@ verify_ssl = true
 
 [packages]
 responder = "*"
+psycopg2-binary = "*"
+gunicorn = "*"
+records = "*"
 
 [requires]
 python_version = "3.7"
