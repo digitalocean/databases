@@ -3,8 +3,15 @@
 const { Client : pgClient } = require('pg')
 // make sure to set the connection details in environment variables
 const dbConfig = require('./database-credentials')
-const db = new pgClient(dbConfig)
-db.connect()
+
+let db
+try {
+    db = new pgClient(dbConfig)
+    db.connect()
+} catch (e) {
+    console.error("couldn't connect to the database", e)
+    process.exit(1)
+}
 
 // express app
 
