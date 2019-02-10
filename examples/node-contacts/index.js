@@ -1,7 +1,7 @@
 // databases connection
 
 const { Client : pgClient } = require('pg')
-// see database-credentials.example.js for an example
+// make sure to set the connection details in environment variables
 const dbConfig = require('./database-credentials')
 const db = new pgClient(dbConfig)
 db.connect()

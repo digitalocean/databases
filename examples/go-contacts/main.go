@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"html/template"
 	"net/http"
+	"os"
 	"strings"
 
 	_ "github.com/jackc/pgx/stdlib"
@@ -14,10 +15,12 @@ import (
 	"github.com/pkg/errors"
 )
 
+// ContactFavorites is a field that contains a contact's favorites
 type ContactFavorites struct {
 	Colors []string `json:"colors"`
 }
 
+// Contact represents a Contact model in the database
 type Contact struct {
 	ID                   int
 	Name, Address, Phone string
@@ -29,9 +32,18 @@ type Contact struct {
 	UpdatedAt string `db:"updated_at"`
 }
 
+func getenvWithDefault(name, defaultValue string) string {
+	val := os.Getenv(name)
+	if val == "" {
+		val = defaultValue
+	}
+
+	return val
+}
+
 var (
-	connectionString = flag.String("conn", "", "PostgreSQL connection string")
-	listenAddr       = flag.String("addr", ":8080", "HTTP address to listen on")
+	connectionString = flag.String("conn", getenvWithDefault("DATABASE_URL", ""), "PostgreSQL connection string")
+	listenAddr       = flag.String("addr", getenvWithDefault("LISTENADDR", ":8080"), "HTTP address to listen on")
 	db               *sqlx.DB
 	tmpl             = template.New("")
 )

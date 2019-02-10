@@ -7,3 +7,4 @@ This example uses [sqlx](https://github.com/jmoiron/sqlx) along with [pgx](https
 3. Prepare your PostgreSQL connection string. See [the examples README](../README.md#database-credentials)
 4. [Import the dataset](../README.md#the-dataset) if necessary
 5. Start the app: `./go-contacts -conn "PostgreSQL Connection String"`
+    * You can alternatively pass the connection string in an environment variable named `DATABASE_URL`
