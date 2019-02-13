@@ -23,7 +23,7 @@ This URI contains all the necessary info for a PostgreSQL client to connect to y
 * `sslmode=require`—forces a secure TLS connection. A common convention, from JDBC. 
 
 **Note:**
-- It is considered best practice, and a well adopted standard, to store this connection string in an [environment variable]() called `DATABASE_URL
+- It is considered best practice, and a well adopted standard, to store this connection string in an [environment variable](https://12factor.net/config) called `DATABASE_URL`.
 - This URL contains *all* the information needed to access (and manipulate) your data. Keep it safe! Rotate it regularly.
 - DigitalOcean Databases do not support non-TLS connections.
 
