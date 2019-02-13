@@ -23,7 +23,7 @@ Authority:
 
 * `postgresql://` — Postgres protocol (scheme)
 * `username` — username
-* `xxxxxx` — password
+* `password` — password
 * `cluster-namea.db.ondigitalocean.com`— hostname to connect to
 * `25060`— port to connect to
 
