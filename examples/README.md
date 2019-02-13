@@ -9,20 +9,25 @@
 These examples require a DigitalOcean Database instance. In the control panel, you are given a "Connection String" that looks like so:
 
 ```
-postgresql://doadmin:xyz@db-postgresql-fra1-000-do-user-000-0.db.ondigitalocean.com:25060/defaultdb?sslmode=require
+postgresql://username:password@db-postgresql-fra1-000-do-user-000-0.db.ondigitalocean.com:25060/defaultdb?sslmode=require
 ```
 
 This URI contains all the necessary info for a PostgreSQL client to connect to your DigitalOcean Database. Here's what it contains:
 
-* `postgresql://`—PostgreSQL
-* `doadmin`—the username
-* `xyz`—the password
-* `db-postgresql-fra1-000-do-user-000-0.db.ondigitalocean.com`—the hostname
-* `25060`—the port
-* `defaultdb`—the name of the database
-* `sslmode=require`—forces a secure TLS connection. Databases does not support non-TLS connections.
+* `postgresql://` — Postgres protocol (scheme)
+* `username` — username
+* `xxxxxx` — password
+* `db-postgresql-fra1-000-do-user-000-0.db.ondigitalocean.com`— hostname to connect to
+* `25060`— port to connect to
+* `defaultdb`—the name of the database to connect to
+* `sslmode=require`—forces a secure TLS connection. A common convention, from JDBC. 
 
-Using the connection string given to you, you can extract the hostname and port to use in these example apps. Use the control panel to create a database and a new user.
+**Note:**
+- It is considered best practice, and a well adopted standard, to store this connection string in an [environment variable](https://12factor.net/config) called `DATABASE_URL`.
+- This URL contains *all* the information needed to access (and manipulate) your data. Keep it safe! Rotate it regularly.
+- DigitalOcean Databases do not support non-TLS connections.
+
+Use the control panel to create a database and a new user.
 
 ### The web app
 
