@@ -33,7 +33,7 @@ Path:
 
 Query:
 
-* `sslmode=require`—forces a secure TLS connection. A common convention, from JDBC. 
+* `?sslmode=require `— instructs most PG clients to only use a trusted TLS connection. A common convention, from JDBC. 
 
 **Note:**
 - It is considered best practice, and a well adopted standard, to store this connection string in an [environment variable](https://12factor.net/config) called `DATABASE_URL`.
