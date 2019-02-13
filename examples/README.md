@@ -84,7 +84,7 @@ psql 'postgresql://user:password@db-postgresql-fra1-000-do-user-000-0.db.ondigit
 
 To import using a GUI client, connect to the database and import the `contacts.sql` file through the method the client offers you.
 
-##### Contents
+##### Example dataset
 
 | id | name                    | phone          | address                                                    | favorites                                                               | created_at          | updated_at          |
 |----|-------------------------|----------------|------------------------------------------------------------|-------------------------------------------------------------------------|---------------------|---------------------|
