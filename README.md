@@ -21,3 +21,6 @@ This repo contains a minimal examples of using DigitalOcean Managed Databases (u
 
 * [How to Use a PostgreSQL Connection String](/examples#database-credentials)
 
+## License
+
+[Apache 2.0](/LICENSE).
