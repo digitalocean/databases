@@ -4,13 +4,13 @@
 
 ### Managed Databases. Simplified.
 
-Fully hosted and managed database engines for your applications, so you can focus on building, not patching.
+DigitalOcean Databases is a fully hosted and managed database service for your applications. You can focus on building, not patching.
 
-**[More info / early access](https://try.digitalocean.com/dbaas-beta/)**.
+**[Learn More / Early Access](https://try.digitalocean.com/dbaas-beta/)**.
 
 ## What is this repo?
 
-This repo contains a minimal examplesof using DigitalOcean Managed Databases. The examples are based on [a simple contacts list app](/examples/README.md).
+This repo contains a minimal examples of using DigitalOcean Managed Databases (using PostgreSQL). The examples are based on [a simple contacts list app](/examples/README.md).
 
 * [How to Use a Managed Database in Go](/examples/go-contacts)
 * [How to Use a Managed Database in Node.js](/examples/node-contacts)
