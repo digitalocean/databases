@@ -6,7 +6,7 @@
 
 Fully hosted and managed database engines for your applications, so you can focus on building, not patching.
 
-For more info and to request early access, [click here](https://try.digitalocean.com/dbaas-beta/).
+**[More info / early access](https://try.digitalocean.com/dbaas-beta/)**.
 
 ## What is this repo?
 
