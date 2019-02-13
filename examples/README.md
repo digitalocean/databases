@@ -58,7 +58,7 @@ The dataset used in the examples is structured like so:
 
 ```sql
 CREATE TABLE contacts (
-    id integer NOT NULL,
+    id serial,
     name character varying(255) NOT NULL,
     phone character varying(255) NOT NULL,
     address character varying(255) NOT NULL,
