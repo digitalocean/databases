@@ -1,25 +1,38 @@
 ## Examples
 
 * [Go](./go-contacts)
-* [Laravel](./laravel-contacts)
 * [Node](./node-contacts)
+* [PHP / Laravel](./laravel-contacts)
+* [Python](./python-contacts)
 
-### Database credentials
+### Creating a database cluster
 
-These examples require a DigitalOcean Database instance. In the control panel, you are given a "Connection String" that looks like so:
+You may do so using DigitalOcean's Control Panel: https://cloud.digitalocean.com/databases/new
+
+### Connecting to your database
+
+These examples require a DigitalOcean Database instance. In the Control Panel, you are provided with your database's "Connection String", e.g:
 
 ```
-postgresql://username:password@db-postgresql-fra1-000-do-user-000-0.db.ondigitalocean.com:25060/defaultdb?sslmode=require
+postgresql://username:password@cluster-name.db.ondigitalocean.com:25060/defaultdb?sslmode=require
 ```
 
 This URI contains all the necessary info for a PostgreSQL client to connect to your DigitalOcean Database. Here's what it contains:
 
+Authority:
+
 * `postgresql://` — Postgres protocol (scheme)
 * `username` — username
 * `xxxxxx` — password
-* `db-postgresql-fra1-000-do-user-000-0.db.ondigitalocean.com`— hostname to connect to
+* `cluster-namea.db.ondigitalocean.com`— hostname to connect to
 * `25060`— port to connect to
+
+Path:
+
 * `defaultdb`—the name of the database to connect to
+
+Query:
+
 * `sslmode=require`—forces a secure TLS connection. A common convention, from JDBC. 
 
 **Note:**
