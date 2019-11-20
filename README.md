@@ -1,16 +1,20 @@
 # DigitalOcean Managed Databases
 
-###### NOW IN BETA
+### Worry-free database hosting
 
-### Managed Databases. Simplified.
+Leave the complexity of database administration to us. We’ll handle setting up, backing up, and updating — so you can focus on building great apps.
 
-DigitalOcean Databases is a fully hosted and managed database service for your applications. You can focus on building, not patching.
+* Fully managed databases
+* MySQL, Redis, & PostgreSQL
+* Highly scalable
+* Free daily backups
+* Automatic failover
 
-**[Learn More / Early Access](https://try.digitalocean.com/dbaas-beta/)**.
+**[Learn More](https://www.digitalocean.com/products/managed-databases/)**
 
 ## What is this repo?
 
-This repo contains a minimal examples of using DigitalOcean Managed Databases (using PostgreSQL). The examples are based on [a simple contacts list app](/examples/README.md).
+This repo contains a minimal examples of using DigitalOcean Managed Databases (with PostgreSQL). The examples are based on [a simple contacts list app](/examples/README.md).
 
 * [How to Use a Managed Database in Go](/examples/go-contacts)
 * [How to Use a Managed Database in Node.js](/examples/node-contacts)
@@ -20,6 +24,7 @@ This repo contains a minimal examples of using DigitalOcean Managed Databases (u
 ## Further Reading
 
 * [How to Use a PostgreSQL Connection String](/examples#database-credentials)
+* [Managed Databases Product Documentation](https://www.digitalocean.com/docs/databases/)
 
 ## License
 
