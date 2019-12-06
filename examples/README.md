@@ -4,6 +4,7 @@
 * [Node](./node-contacts)
 * [PHP / Laravel](./laravel-contacts)
 * [Python](./python-contacts)
+* [Vue.js + PostgREST](./vue-postgrest-contacts)
 
 ### Creating a database cluster
 
